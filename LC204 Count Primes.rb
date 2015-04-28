@@ -12,7 +12,7 @@ def count_primes(n)
     3.step(c.to_i, 2) do |i|
         if !b[i] then
             (i * i).step(n, i << 1) do |j|
-                b[j]=true
+                b[j] = true
             end
         end
     end
