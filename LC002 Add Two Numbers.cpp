@@ -32,7 +32,6 @@ public:
                 p->val += l2->val;
                 l2 = l2->next;
             }
-            
         }
         
         return sum;
