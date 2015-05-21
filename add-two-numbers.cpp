@@ -1,11 +1,13 @@
 // #include <stdio.h> 
 
-//  struct ListNode {
-//      int val;
-//      ListNode *next;
-//      ListNode(int x) : val(x), next(NULL) {}
-//  };
- 
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
@@ -32,6 +34,7 @@ public:
                 p->val += l2->val;
                 l2 = l2->next;
             }
+            
         }
         
         return sum;

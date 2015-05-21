@@ -21,9 +21,9 @@ def rob(nums)
   return nums[l - 2, 2].max
 end
 
-nums = []
-ARGV.each do |s|
-  nums.push s.to_i
-end
+# nums = []
+# ARGV.each do |s|
+#   nums.push s.to_i
+# end
 
-p rob(nums)
+# p rob(nums)
