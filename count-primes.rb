@@ -24,6 +24,6 @@ def count_primes(n)
     end
 
     return count
-end
+end 
 
 # p count_primes(ARGV[0].to_i)

@@ -18,7 +18,7 @@ def rob(nums)
     nums[i] += nums[i-3, 2].max
   end
 
-  return nums[l - 2, 2].max
+  return nums[l-2, 2].max
 end
 
 # nums = []
