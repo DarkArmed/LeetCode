@@ -2,58 +2,17 @@ class Solution:
     # @param {integer} num
     # @return {string}
     def intToRoman(self, num):
+
+        roman  = {1000: 'M', 900: 'CM', 500: 'D', 400: 'CD', 100: 'C', 90: 'XC', 50: 'L', 40: 'XL', 10: 'X', 9: 'IX', 5: 'V', 4: 'IV', 1: 'I'}
+
         s = ""
-        
-        while num >= 1000:
-            s += 'M'
-            num -= 1000
-        
-        if num >= 900:
-            s += 'CM'
-            num -= 900
-        
-        if num >= 500:
-            s += 'D'
-            num -= 500
-            
-        if num >= 400:
-            s += 'CD'
-            num -= 400
-        
-        while num >= 100:
-            s += 'C'
-            num -= 100
-        
-        if num >= 90:
-            s += 'XC'
-            num -= 90
-        
-        if num >= 50:
-            s += 'L'
-            num -= 50
-            
-        if num >= 40:
-            s += 'XL'
-            num -= 40
-        
-        while num >= 10:
-            s += 'X'
-            num -= 10
-        
-        if num >= 9:
-            s += 'IX'
-            num -= 9
-        
-        if num >= 5:
-            s += 'V'
-            num -= 5
-        
-        if num >= 4:
-            s += 'IV'
-            num -= 4
-            
-        while num > 0:
-            s += 'I'
-            num -= 1
-        
+
+        for i in sorted(roman.keys(), reverse = True):
+            while num >= i:
+                s += roman[i]
+                num -= i
+
         return s
+
+# for num in range(4000):
+#     print num, Solution().intToRoman(num)
